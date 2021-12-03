@@ -15,5 +15,6 @@
   "license": "ISC",
   "dependencies": {
     "jsonwebtoken": "^8.5.1"
-  }
+  },
+  "keywords":"nodejs,nodejsencoding,protect node scripts"
 }
