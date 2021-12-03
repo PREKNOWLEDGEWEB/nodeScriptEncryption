@@ -1,12 +1,17 @@
 {
   "name": "nodescriptencryption",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.2",
+  "description": "Encode decode your nodejs scripts",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node examples/decodeScript.js"
   },
-  "author": "",
+  "homepage": "https://github.com/PREKNOWLEDGEWEB/nodeScriptEncryption",
+  "bugs":{
+    "url" : "https://github.com/PREKNOWLEDGEWEB/nodeScriptEncryption/issues",
+    "email" : "preknolwedge@gmail.com"
+  },
+  "author": "pp200",
   "license": "ISC",
   "dependencies": {
     "jsonwebtoken": "^8.5.1"
