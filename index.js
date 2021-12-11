@@ -5,20 +5,20 @@ module.exports.execute = function(codeParsed){
     throw new Error(e);
   }  
 };
-module.exports.encode = function(code){
+module.exports.encode = function(code,secret = 'decodscript1245gdf'){
   try{
     const jwt = require('jsonwebtoken');
     const compiledCode = module.exports.toBase64(module.exports.toBase64(code));
-    var token = jwt.sign({ base64: compiledCode }, 'decodscript1245gdf');
+    var token = jwt.sign({ base64: compiledCode }, secret || 'decodscript1245gdf');
     return token;
   }catch(e){
     throw new Error(e);
   }  
 };
-module.exports.decode = function(code){
+module.exports.decode = function(code,secret = 'decodscript1245gdf'){
   try{
     const jwt = require('jsonwebtoken');
-    var CodeDe = jwt.verify(code, 'decodscript1245gdf');
+    var CodeDe = jwt.verify(code, secret || 'decodscript1245gdf');
     if(CodeDe.base64 !== undefined){
       return module.exports.execute(module.exports.fromBase64(CodeDe.base64));
     }else{
